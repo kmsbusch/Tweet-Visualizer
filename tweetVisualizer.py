@@ -7,10 +7,10 @@ import collections
 def getTweets(name):
 
     # personal details
-    consumer_key = "eCpBUXRzDme1HAgZDpQBujXIH"
-    consumer_secret = "Rdvvz9dWybTFG1RqB68EGVHFMoyElJU7gWtXd2lV5eJLLo7FJc"
-    access_token = "1231350294144933889-fNgUqRuabgbs82mjUqfpK61SjQCM7A"
-    access_token_secret = "oqXajRy9dO3DiBmGuv9Gww4nyB6pVoBS3uSqGFuamZb7n"
+    consumer_key = "xxxxxxxxxxxxxxxxxxxxxxxxx"
+    consumer_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    access_token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    access_token_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
     # authentication of consumer key and secret
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
