@@ -4,18 +4,11 @@ import collections
 
 
 
-stringIn = input("Enter your tweet:")
+stringIn = input("Enter your text: ")
 jade = turtle.Turtle()
 jade.pensize(7)
 turtle.title(stringIn)
 stringIn = stringIn.lower()
-
-jimbo = turtle.Turtle()
-jimbo.forward(62)
-jimbo.left(30)
-jimbo.forward(10)
-
-
 
 def charSplit(word):
 	return list(word)
