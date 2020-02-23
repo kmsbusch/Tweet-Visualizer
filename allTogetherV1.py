@@ -3,6 +3,73 @@ import tweepy
 import collections
 
 
+# POSITIVITY VISUALIZER
+listOfNegatives = list()
+with open ("negative.txt", "r") as myfile:
+    for line in myfile:
+        listOfNegatives.append(line.strip())
+
+
+listOfPositives = list()
+with open ("positive.txt", "r") as myfile1:
+    for line in myfile1:
+        listOfPositives.append(line.strip())
+
+kevin = turtle.Turtle()
+kevin.pensize(5)
+turtle.title("Pos/Neg")
+turtle.screensize(2000,1500)
+kevin.color('white')
+kevin.backward(300)
+
+
+def comparePositive(word):
+    for x in range(len(listOfPositives)):
+        if word == listOfPositives[x]:
+            return True
+
+def compareNegative(word):
+    for x in range(len(listOfNegatives)):
+        if word == listOfNegatives[x]:
+            return True
+
+def compareToList(tweet):
+
+    print("Selected: ", tweet)
+    tweetList = list(tweet.split())
+    for x in range(len(tweetList)):
+		kevin.setpos(-325, 400)
+
+		isPositive = comparePositive(tweetList[x])
+		isNegative = compareNegative(tweetList[x])
+
+		if isPositive == True:
+			kevin.color('green')
+			kevin.left(45)
+			kevin.forward(30)
+			kevin.dot(7)
+			kevin.right(90)
+			kevin.forward(30)
+			kevin.left(45)
+
+
+		elif isNegative == True:
+			kevin.color('red')
+			kevin.right(45)
+			kevin.forward(30)
+			kevin.dot(7)
+			kevin.left(90)
+			kevin.forward(30)
+			kevin.right(45)
+
+
+		else:
+			kevin.color('grey')
+			kevin.dot(7)
+			kevin.forward(20)
+
+
+
 
 def getTweets(name):
 
@@ -37,7 +104,10 @@ def getTweets(name):
 
     index = input("Which tweet would you like to visualise? \n =>")
     index = int(index)
+	compareToList(final[index - 1])
     return final[index - 1]
+	
+
 
 
 
